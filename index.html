@@ -428,8 +428,78 @@ nav { display: flex; align-items: center; }
   max-width: 500px; margin: 0 auto 36px; line-height: 1.8;
 }
 
+/* ═══ NEWSLETTER ═══ */
+.newsletter {
+  padding: 80px 0;
+  background: var(--cream-warm);
+  text-align: center;
+}
+.newsletter h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--deep-purple);
+  margin-bottom: 12px;
+}
+.newsletter p {
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto 32px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+.newsletter-form {
+  display: flex;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 14px 20px;
+  border: 2px solid var(--border-light);
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--white);
+  color: var(--text-dark);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.newsletter-form input[type="email"]:focus {
+  border-color: var(--deep-purple);
+}
+.newsletter-form input[type="email"]::placeholder {
+  color: var(--text-muted);
+}
+.newsletter-form button {
+  padding: 14px 32px;
+  background: var(--deep-purple);
+  color: var(--white);
+  border: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+.newsletter-form button:hover {
+  background: var(--purple-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0,79,99,0.25);
+}
+@media (max-width: 640px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+  .newsletter-form button {
+    width: 100%;
+  }
+}
+
 /* ═══ FOOTER ═══ */
-.site-footer { background: #0F0B24; color: rgba(255,255,255,0.6); padding: 70px 0 0; }
+.site-footer { background: #0A2A30; color: rgba(255,255,255,0.6); padding: 70px 0 0; }
 .footer-grid {
   display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
   gap: 48px; padding-bottom: 50px;
@@ -775,6 +845,18 @@ nav { display: flex; align-items: center; }
       </a>
       <a href="tel:6157036959" class="btn btn-outline">Call (615) 703-6959</a>
     </div>
+  </div>
+</section>
+
+<!-- ═══ NEWSLETTER ═══ -->
+<section class="newsletter">
+  <div class="container">
+    <h2>Stay Connected with Us</h2>
+    <p>Subscribe to our newsletter for grief support resources, upcoming events, and words of encouragement delivered to your inbox.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thank you!'; this.querySelector('input').value='';">
+      <input type="email" placeholder="Enter your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
   </div>
 </section>
 
