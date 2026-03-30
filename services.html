@@ -235,7 +235,7 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   pointer-events: none;
 }
 .page-hero::after {
-  content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 100px;
+  content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 60px;
   background: linear-gradient(to top, var(--cream), transparent); z-index: 2;
 }
 .page-hero-decor { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
@@ -252,7 +252,7 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   position: relative; z-index: 3;
   display: flex; flex-direction: column; align-items: center;
   text-align: center;
-  padding: 110px 0 140px;
+  padding: 100px 0 110px;
   width: 100%;
 }
 .page-hero-content { max-width: 720px; }
@@ -318,16 +318,10 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   transition: all 0.4s ease; position: relative; overflow: hidden;
   display: flex; flex-direction: column;
 }
-.detailed-service-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, var(--deep-purple), var(--gold));
-  opacity: 0; transition: opacity 0.4s ease;
-}
 .detailed-service-card:hover {
   transform: translateY(-5px); box-shadow: var(--shadow-hover);
   background: var(--white);
 }
-.detailed-service-card:hover::before { opacity: 1; }
 .service-icon-circle {
   width: 64px; height: 64px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center; margin-bottom: 28px;
@@ -431,13 +425,7 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   border: 1px solid var(--border-light); transition: all 0.4s ease;
   position: relative; overflow: hidden; text-align: center;
 }
-.why-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, var(--deep-purple), var(--gold));
-  opacity: 0; transition: opacity 0.4s ease;
-}
 .why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
-.why-card:hover::before { opacity: 1; }
 .why-icon {
   width: 64px; height: 64px; border-radius: 16px;
   display: flex; align-items: center; justify-content: center;
@@ -643,13 +631,13 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   .featured-banner-icon { margin: 0 auto; }
   .insurance-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
-  .page-hero-inner { padding: 90px 0 120px; }
+  .page-hero-inner { padding: 80px 0 95px; }
 }
 @media (max-width: 640px) {
   .top-bar .container { flex-direction: column; text-align: center; gap: 6px; }
   .top-bar-left { justify-content: center; }
   .top-bar-right { display: none; }
-  .page-hero-inner { padding: 70px 0 100px; }
+  .page-hero-inner { padding: 60px 0 80px; }
   .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); }
   .detailed-service-card { padding: 32px 24px; }
   .featured-banner { padding: 60px 0; }
