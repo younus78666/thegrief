@@ -377,36 +377,40 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
   background: var(--border-light);
 }
-.ce-header { margin-bottom: 40px; }
+.ce-header { margin-bottom: 24px; }
 .ce-intro {
   font-size: 1.02rem; color: var(--text-body); line-height: 1.85;
-  max-width: 780px; margin-bottom: 40px;
+  max-width: 780px; margin-bottom: 48px;
 }
-.ce-features { display: flex; flex-direction: column; gap: 28px; margin-bottom: 40px; }
+.ce-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
 .ce-feature {
-  display: flex; gap: 20px; align-items: flex-start;
+  background: var(--cream); border-radius: 16px; padding: 36px 28px;
+  border: 1px solid var(--border-light); transition: all 0.4s ease;
+  text-align: center;
 }
+.ce-feature:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
 .ce-feature-icon {
-  width: 54px; height: 54px; border-radius: 14px; flex-shrink: 0;
+  width: 58px; height: 58px; border-radius: 50%; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
 }
 .ce-feature-icon.purple { background: var(--lavender); color: var(--deep-purple); }
 .ce-feature-icon.gold { background: var(--gold-pale); color: var(--gold); }
 .ce-feature-icon.teal { background: var(--teal-soft); color: var(--teal); }
-.ce-feature-icon svg { width: 24px; height: 24px; }
+.ce-feature-icon svg { width: 26px; height: 26px; }
 .ce-feature-text h3 {
-  font-size: 1.15rem; font-weight: 600; margin-bottom: 6px;
+  font-size: 1.15rem; font-weight: 600; margin-bottom: 10px;
 }
 .ce-feature-text p {
-  color: var(--text-muted); font-size: 0.95rem; line-height: 1.75;
+  color: var(--text-muted); font-size: 0.93rem; line-height: 1.75;
 }
 .ce-note {
-  background: var(--cream); border-radius: 14px; padding: 24px 28px;
-  border: 1px solid var(--border-light);
+  background: var(--cream-warm); border-radius: 14px; padding: 24px 28px;
+  border: 1px solid var(--gold-pale);
   font-size: 0.95rem; color: var(--text-body); line-height: 1.75;
-  display: flex; align-items: flex-start; gap: 14px;
+  display: flex; align-items: center; gap: 14px;
 }
-.ce-note svg { width: 22px; height: 22px; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+.ce-note svg { width: 22px; height: 22px; color: var(--gold); flex-shrink: 0; }
 
 /* ═══ CONSULTATION SECTION ═══ */
 .consultation-section {
@@ -596,6 +600,7 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   .mobile-nav-overlay { display: block; }
   .value-grid { grid-template-columns: 1fr; gap: 20px; }
   .components-grid { grid-template-columns: 1fr; }
+  .ce-features { grid-template-columns: 1fr; }
   .audience-list { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
   .page-hero-inner { padding: 80px 0 95px; }
@@ -609,7 +614,7 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); }
   .component-card { padding: 30px 24px; }
   .consultation-card { padding: 32px 24px; }
-  .ce-feature { flex-direction: column; gap: 12px; }
+  .ce-features { grid-template-columns: 1fr; }
   .btn { width: 100%; justify-content: center; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
