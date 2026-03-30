@@ -257,29 +257,8 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   background: linear-gradient(160deg, #003D4F 0%, #005264 30%, #004050 70%, #002D3A 100%);
   overflow: hidden;
 }
-.page-hero::before {
-  content: ''; position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(90,157,200,0.12) 0%, transparent 60%),
-    radial-gradient(ellipse at 50% 100%, rgba(197,165,90,0.08) 0%, transparent 50%);
-  pointer-events: none;
-}
-.page-hero::after {
-  content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 60px;
-  background: linear-gradient(to top, var(--cream), transparent); z-index: 2;
-}
-.page-hero-decor { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
-.page-hero-decor .circle { position: absolute; border-radius: 50%; border: 1px solid rgba(255,255,255,0.04); }
-.page-hero-decor .c1 { width: 500px; height: 500px; top: -200px; left: 50%; transform: translateX(-50%); animation: float 24s ease-in-out infinite; }
-.page-hero-decor .c2 { width: 300px; height: 300px; bottom: -50px; left: -80px; animation: float 18s ease-in-out infinite reverse; }
-.page-hero-decor .c3 { width: 200px; height: 200px; top: 20%; right: -40px; border-color: rgba(90,157,200,0.06); animation: float 16s ease-in-out infinite 2s; }
-@keyframes float {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  33% { transform: translate(10px, -15px) rotate(2deg); }
-  66% { transform: translate(-5px, 10px) rotate(-1deg); }
-}
 .page-hero-inner {
-  position: relative; z-index: 3;
+  position: relative; z-index: 1;
   display: flex; flex-direction: column; align-items: center;
   text-align: center;
   padding: 100px 0 110px;
@@ -288,17 +267,16 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
 .page-hero-content { max-width: 720px; }
 .page-hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
   color: var(--gold-light); font-size: 0.78rem; font-weight: 600;
   letter-spacing: 0.14em; text-transform: uppercase;
   padding: 10px 22px; border-radius: 50px; margin-bottom: 28px;
-  backdrop-filter: blur(10px);
   animation: fadeInUp 0.8s ease both;
 }
 .page-hero-badge svg { width: 14px; height: 14px; }
 .page-hero-divider {
   width: 60px; height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+  background: var(--gold-light);
   margin: 0 auto 28px;
   animation: fadeInUp 0.8s ease both 0.1s;
 }
@@ -407,12 +385,6 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   background: linear-gradient(135deg, var(--deep-purple), #003545);
   position: relative; overflow: hidden;
 }
-.featured-banner::before {
-  content: ''; position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse at 30% 50%, rgba(197,165,90,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 50%, rgba(43,164,181,0.05) 0%, transparent 50%);
-}
 .featured-banner .container { position: relative; z-index: 1; }
 .featured-banner-inner {
   display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: center;
@@ -507,12 +479,6 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   padding: 90px 0;
   background: linear-gradient(135deg, var(--deep-purple), #003545);
   text-align: center; position: relative; overflow: hidden;
-}
-.cta-banner::before {
-  content: ''; position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse at 30% 50%, rgba(197,165,90,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 50%, rgba(43,164,181,0.05) 0%, transparent 50%);
 }
 .cta-banner .container { position: relative; z-index: 1; }
 .cta-banner h2 {
@@ -755,11 +721,6 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
 
 <!-- ═══ PAGE HERO ═══ -->
 <section class="page-hero">
-  <div class="page-hero-decor">
-    <div class="circle c1"></div>
-    <div class="circle c2"></div>
-    <div class="circle c3"></div>
-  </div>
   <div class="container">
     <div class="page-hero-inner">
       <div class="page-hero-content">
