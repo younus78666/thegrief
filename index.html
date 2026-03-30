@@ -75,17 +75,17 @@ img { max-width: 100%; display: block; }
 }
 .site-header.scrolled { box-shadow: 0 2px 20px rgba(0,79,99,0.08); }
 .header-inner {
-  display: flex; align-items: center; justify-content: space-between; padding: 10px 0; gap: 24px;
+  display: flex; align-items: center; justify-content: space-between; padding: 10px 0; gap: 16px;
 }
 .logo { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
 .logo-img {
-  height: 60px; width: auto; object-fit: contain;
+  height: 54px; width: auto; object-fit: contain;
 }
-nav { display: flex; align-items: center; }
-.nav-links { display: flex; list-style: none; gap: 4px; align-items: center; }
+nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; min-width: 0; }
+.nav-links { display: flex; list-style: none; gap: 2px; align-items: center; justify-content: flex-end; flex-wrap: wrap; }
 .nav-links a {
-  font-size: 0.84rem; font-weight: 500; color: var(--text-body);
-  padding: 8px 13px; border-radius: 6px; transition: all 0.25s ease; white-space: nowrap;
+  font-size: 0.78rem; font-weight: 500; color: var(--text-body);
+  padding: 8px 10px; border-radius: 6px; transition: all 0.25s ease; white-space: nowrap;
 }
 .nav-links a:hover { color: var(--deep-purple); background: var(--lavender); }
 .nav-cta {
@@ -615,12 +615,14 @@ nav { display: flex; align-items: center; }
       <nav>
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
-          <li><a href="#">Supervision</a></li>
-          <li><a href="#">Concierge</a></li>
+          <li><a href="#">Meet the Team</a></li>
+          <li><a href="#">Clinical Supervision</a></li>
+          <li><a href="#">Training &amp; Consultation</a></li>
+          <li><a href="#">Grief Groups</a></li>
           <li><a href="#">Podcast</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#" class="nav-cta">Grief Support</a></li>
+          <li><a href="#" class="nav-cta">Contact</a></li>
         </ul>
       </nav>
       <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">
@@ -636,13 +638,14 @@ nav { display: flex; align-items: center; }
   <button class="mobile-nav-close" id="mobileClose">&times;</button>
   <ul class="mobile-nav-links">
     <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
     <li><a href="#">Services</a></li>
+    <li><a href="#">Meet the Team</a></li>
     <li><a href="#">Clinical Supervision</a></li>
-    <li><a href="#">Concierge / VIP</a></li>
+    <li><a href="#">Training &amp; Consultation</a></li>
+    <li><a href="#">Grief Groups</a></li>
     <li><a href="#">Podcast</a></li>
-    <li><a href="#">Location</a></li>
-    <li><a href="#">Contact Us</a></li>
-    <li><a href="#" class="nav-cta-mobile">Grief Support Registration</a></li>
+    <li><a href="#" class="nav-cta-mobile">Contact</a></li>
   </ul>
 </div>
 
@@ -662,7 +665,7 @@ nav { display: flex; align-items: center; }
         </div>
         <div class="hero-divider"></div>
         <h2>Everywhere you go,<br>your grief goes — <em>let us walk with you.</em></h2>
-        <p>A restorative space where grief is normalized in a grief-avoidant society. Connection, education, and guidance through individual therapy, group support, and concierge services.</p>
+        <p>A restorative space where grief is normalized in a grief-avoidant society through therapy services, grief-informed education, clinical support, and community care.</p>
         <div class="hero-buttons">
           <a href="/groups/" class="btn btn-primary">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
@@ -683,7 +686,7 @@ nav { display: flex; align-items: center; }
   <div class="container">
     <div class="section-eyebrow">Our Foundation</div>
     <h2 class="section-heading">What We Believe</h2>
-    <p class="section-sub">Our team of clinicians offer a range of services designed to meet the unique needs of not only those grieving the loss of a loved one, but any transition of life circumstance.</p>
+    <p class="section-sub">The Grief Center supports grief, trauma, and major life transitions through therapy services, grief-informed education, clinical support, and community care.</p>
     <div class="beliefs-grid">
       <div class="belief-card">
         <div class="belief-icon purple">
@@ -703,8 +706,8 @@ nav { display: flex; align-items: center; }
         <div class="belief-icon teal">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
         </div>
-        <h3>Privacy Matters</h3>
-        <p>We service all individuals confidentially, with a unique provision of serving clients who are in the public eye in private settings as well.</p>
+        <h3>Care Rooted in Trust</h3>
+        <p>We offer confidential, compassionate support in a safe environment where individuals, couples, and families can be fully seen, heard, and cared for.</p>
       </div>
     </div>
   </div>
@@ -716,42 +719,42 @@ nav { display: flex; align-items: center; }
     <div class="services-header">
       <div class="section-eyebrow">How We Help</div>
       <h2 class="section-heading">Our Services</h2>
-      <p class="section-sub">From individual grief therapy to VIP concierge sessions, our clinicians are here to support you through every transition.</p>
+      <p class="section-sub">Individual therapy, grief groups, family sessions, and couples support designed to help people process loss, trauma, and major life transitions.</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-num">01</div>
-        <h3>Individual Grief Therapy</h3>
-        <p>One-on-one therapy sessions tailored to your needs, focusing on processing grief and developing coping mechanisms for mental health challenges related to loss or life transitions.</p>
+        <h3>Individual Counseling Sessions</h3>
+        <p>One-on-one grief and mental health counseling tailored to the individual, with support for processing loss, trauma, and life transitions while building practical coping tools.</p>
         <a href="/services/" class="service-link">Learn more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
       </div>
       <div class="service-card">
         <div class="service-num">02</div>
         <h3>Group Grief Support</h3>
-        <p>A collective space for individuals experiencing loss to connect, share, and heal together. Facilitated group sessions that foster community, coping strategies, and emotional support.</p>
+        <p>A collective space for people experiencing loss to connect with others, share openly, feel understood, and learn coping strategies in a supportive facilitated setting.</p>
         <a href="/groups/" class="service-link">Register now <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
       </div>
       <div class="service-card">
         <div class="service-num">03</div>
-        <h3>Couples Therapy</h3>
-        <p>Counseling designed to help partners navigate relationship challenges, improve communication, foster deeper understanding, and enhance emotional intimacy.</p>
+        <h3>Family Grief Sessions</h3>
+        <p>Support for families who have recently experienced a loss and need space to process together, strengthen communication, and receive guided care as a unit.</p>
         <a href="/services/" class="service-link">Learn more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
       </div>
       <div class="service-card">
         <div class="service-num">04</div>
-        <h3>Clinical Supervision &amp; CE Training</h3>
-        <p>Professional development through clinical supervision and continuing education for mental health practitioners. Includes case consultation, reflective practice, and accredited CE workshops.</p>
-        <a href="/clinical-supervision-and-trainings/" class="service-link">Learn more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+        <h3>Couples Therapy</h3>
+        <p>Counseling designed to help partners navigate relationship challenges, improve communication, deepen understanding, and strengthen emotional intimacy during difficult seasons.</p>
+        <a href="/services/" class="service-link">Learn more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
       </div>
       <div class="service-card featured">
         <div class="featured-left">
           <div class="service-num">05</div>
-          <h3>Concierge / VIP Services</h3>
-          <p>Discreet, grounded therapy designed for public lives. On-location sessions, extended intensives, private office experiences, and holistic integration for artists, executives, first responders, and public figures.</p>
-          <a href="/1311-2/" class="service-link">Inquire privately <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          <h3>Care That Meets You Where You Are</h3>
+          <p>Our services are designed to support individuals, couples, and families navigating grief, trauma, and life transitions with care that is personal, grounded, and responsive.</p>
+          <a href="/contact-us/" class="service-link">Start the conversation <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
         </div>
         <div class="featured-right">
-          <div class="featured-badge">For those who hold others<br><span>— we hold you.</span></div>
+          <div class="featured-badge">Support for loss, trauma,<br><span>and life transitions.</span></div>
         </div>
       </div>
     </div>
@@ -773,7 +776,7 @@ nav { display: flex; align-items: center; }
         <div class="founder-credentials">LPC-MHSP</div>
         <div class="founder-title">Founder &amp; Chief Grief Executive</div>
         <p>Christal leads a group practice of dedicated therapists and support staff committed to normalizing grief in a society that often avoids it. With deep expertise in grief therapy, clinical supervision, and trauma-informed care, she has built The Grief Center as a restorative ecosystem for individuals, families, organizations, and communities.</p>
-        <p>From confidential VIP sessions for public figures to accessible group grief support, Christal's vision ensures that every person — regardless of their walk of life — has a safe space to process, heal, and grow.</p>
+        <p>From individual counseling and family sessions to grief groups and broader grief-informed support, Christal's vision is to create a safe place where people can process, heal, and grow.</p>
         <div class="founder-quote">"Everywhere you go, your grief goes — let us walk with you."</div>
       </div>
     </div>
@@ -826,7 +829,7 @@ nav { display: flex; align-items: center; }
 <section class="cta-banner">
   <div class="container">
     <h2>Ready to take the <em>first step?</em></h2>
-    <p>Whether you're navigating loss, supporting a loved one, or seeking professional supervision — we're here.</p>
+    <p>Whether you're navigating loss, supporting a loved one, or looking for grief-informed care, we're here.</p>
     <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
       <a href="/contact-us/" class="btn btn-primary">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -861,18 +864,19 @@ nav { display: flex; align-items: center; }
         <h4>Quick Links</h4>
         <ul>
           <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
-          <li><a href="#">Grief Support</a></li>
-          <li><a href="#">Concierge / VIP</a></li>
-          <li><a href="#">Podcast</a></li>
+          <li><a href="#">Meet the Team</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Resources</h4>
+        <h4>Programs</h4>
         <ul>
           <li><a href="#">Clinical Supervision</a></li>
-          <li><a href="#">In-Person Location</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Training &amp; Consultation</a></li>
+          <li><a href="#">Grief Groups</a></li>
+          <li><a href="#">Podcast</a></li>
         </ul>
       </div>
       <div class="footer-col">
