@@ -721,6 +721,9 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   padding: 24px 0; display: flex; justify-content: space-between; align-items: center;
   font-size: 0.8rem; color: rgba(255,255,255,0.35); flex-wrap: wrap; gap: 12px;
 }
+.footer-legal { display: flex; gap: 16px; flex-wrap: wrap; }
+.footer-legal a { color: rgba(255,255,255,0.4); font-size: 0.8rem; transition: color 0.3s ease; }
+.footer-legal a:hover { color: var(--gold-light); }
 
 /* ═══ MOBILE NAV ═══ */
 .mobile-nav-overlay {
@@ -1160,7 +1163,12 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 The Grief Center. All rights reserved.</span>
-      <span>Nashville, Tennessee</span>
+      <div class="footer-legal">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="/accessibility.html">Accessibility</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
     </div>
   </div>
 </footer>

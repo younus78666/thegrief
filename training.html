@@ -312,13 +312,33 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   padding: 80px 0;
   background: var(--cream);
 }
-.training-intro .intro-content {
+.training-intro .intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.training-intro .intro-text {
   max-width: 780px;
 }
-.training-intro .intro-content p {
+.training-intro .intro-text p {
   font-size: 1.02rem; color: var(--text-body); line-height: 1.85; margin-bottom: 18px;
 }
-.training-intro .intro-content p:last-child { margin-bottom: 0; }
+.training-intro .intro-text p:last-child { margin-bottom: 0; }
+.training-intro .intro-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--lavender);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-family: 'DM Sans', sans-serif;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+}
 
 /* ═══ TRAINING SERVICES SECTION ═══ */
 .training-section {
@@ -535,6 +555,9 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   padding: 24px 0; display: flex; justify-content: space-between; align-items: center;
   font-size: 0.8rem; color: rgba(255,255,255,0.35); flex-wrap: wrap; gap: 12px;
 }
+.footer-legal { display: flex; gap: 16px; flex-wrap: wrap; }
+.footer-legal a { color: rgba(255,255,255,0.4); font-size: 0.8rem; transition: color 0.3s ease; }
+.footer-legal a:hover { color: var(--gold-light); }
 
 /* ═══ MOBILE NAV ═══ */
 .mobile-nav-overlay {
@@ -574,6 +597,7 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   .nav-links { display: none; }
   .mobile-toggle { display: block; }
   .mobile-nav-overlay { display: block; }
+  .training-intro .intro-grid { grid-template-columns: 1fr; gap: 40px; }
   .training-grid { grid-template-columns: 1fr; gap: 24px; }
   .consultation-layout { grid-template-columns: 1fr; gap: 36px; }
   .audience-grid { grid-template-columns: repeat(2, 1fr); }
@@ -688,11 +712,16 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
 <main>
 <section class="training-intro">
   <div class="container">
-    <div class="intro-content">
-      <div class="section-eyebrow">Beyond the Therapy Room</div>
-      <h2 class="section-heading">Grief Education for Every Setting</h2>
-      <p>The Grief Center's impact extends far beyond individual therapy. Through professional training, organizational consultation, and community education, we equip the people and systems around grief with the knowledge they need to respond with compassion, competence, and care.</p>
-      <p>Whether you're a healthcare organization looking to build grief-informed practices, a school navigating student loss, a corporate team supporting grieving employees, or a community group seeking education on grief &mdash; our training and consultation services are designed to meet you where you are.</p>
+    <div class="intro-grid">
+      <div class="intro-text">
+        <div class="section-eyebrow">Beyond the Therapy Room</div>
+        <h2 class="section-heading">Grief Education for Every Setting</h2>
+        <p>The Grief Center's impact extends far beyond individual therapy. Through professional training, organizational consultation, and community education, we equip the people and systems around grief with the knowledge they need to respond with compassion, competence, and care.</p>
+        <p>Whether you're a healthcare organization looking to build grief-informed practices, a school navigating student loss, a corporate team supporting grieving employees, or a community group seeking education on grief &mdash; our training and consultation services are designed to meet you where you are.</p>
+      </div>
+      <div class="intro-image">
+        Image placeholder
+      </div>
     </div>
   </div>
 </section>
@@ -971,7 +1000,12 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 The Grief Center. All rights reserved.</span>
-      <span>Nashville, Tennessee</span>
+      <div class="footer-legal">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="/accessibility.html">Accessibility</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
     </div>
   </div>
 </footer>
