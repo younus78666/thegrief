@@ -395,16 +395,17 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   font-size: 1.05rem;
 }
 .team-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;
+  display: flex; flex-direction: column; gap: 28px;
 }
 .team-card {
   background: var(--white); border-radius: 16px; padding: 0;
   border: 1px solid var(--border-light); overflow: hidden;
   transition: all 0.4s ease;
+  display: grid; grid-template-columns: 320px 1fr;
 }
 .team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
 .team-card-image {
-  width: 100%; aspect-ratio: 1; background: var(--lavender);
+  width: 100%; height: 100%; min-height: 320px; background: var(--lavender);
   display: flex; align-items: center; justify-content: center;
   color: var(--text-muted); font-size: 0.85rem;
   overflow: hidden;
@@ -417,11 +418,11 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
 }
 .team-card-email:hover { color: var(--gold); }
 .team-card-email svg { width: 14px; height: 14px; flex-shrink: 0; }
-.team-card-info { padding: 28px 24px; }
-.team-card-name { font-size: 1.3rem; font-weight: 600; margin-bottom: 4px; font-family: 'Cormorant Garamond', serif; color: var(--text-dark); }
+.team-card-info { padding: 36px 36px; display: flex; flex-direction: column; justify-content: center; }
+.team-card-name { font-size: 1.6rem; font-weight: 600; margin-bottom: 4px; font-family: 'Cormorant Garamond', serif; color: var(--text-dark); }
 .team-card-credentials { font-size: 0.82rem; color: var(--gold); font-weight: 600; letter-spacing: 0.04em; }
-.team-card-title { font-size: 0.9rem; color: var(--text-muted); font-style: italic; font-family: 'Cormorant Garamond', serif; margin-bottom: 14px; }
-.team-card-bio { font-size: 0.93rem; color: var(--text-body); line-height: 1.7; margin-bottom: 16px; }
+.team-card-title { font-size: 0.95rem; color: var(--text-muted); font-style: italic; font-family: 'Cormorant Garamond', serif; margin-bottom: 16px; }
+.team-card-bio { font-size: 0.95rem; color: var(--text-body); line-height: 1.75; margin-bottom: 16px; }
 .specialty-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .specialty-tag { font-size: 0.75rem; padding: 5px 12px; border-radius: 50px; background: var(--lavender); color: var(--deep-purple); font-weight: 500; }
 
@@ -596,7 +597,8 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   .mobile-toggle { display: block; }
   .mobile-nav-overlay { display: block; }
   .team-intro .intro-grid { grid-template-columns: 1fr; gap: 40px; }
-  .team-grid { grid-template-columns: 1fr 1fr; }
+  .team-card { grid-template-columns: 260px 1fr; }
+  .team-card-image { min-height: 260px; }
   .founder-grid { grid-template-columns: 1fr; gap: 40px; }
   .founder-image-wrap { max-width: 350px; margin: 0 auto; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
@@ -609,7 +611,9 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   .top-bar-right { display: none; }
   .page-hero-inner { padding: 60px 0 80px; }
   .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); }
-  .team-grid { grid-template-columns: 1fr; }
+  .team-card { grid-template-columns: 1fr; }
+  .team-card-image { aspect-ratio: 1; min-height: auto; }
+  .team-card-info { padding: 28px 24px; }
   .founder-grid { gap: 28px; }
   .join-card { padding: 32px 24px; }
   .btn { width: 100%; justify-content: center; }
@@ -810,38 +814,6 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
             <span class="specialty-tag">Career &amp; Leadership</span>
             <span class="specialty-tag">Brainspotting</span>
             <span class="specialty-tag">Yoga (RYT)</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="team-card">
-        <div class="team-card-image">
-          <span>Photo Coming Soon</span>
-        </div>
-        <div class="team-card-info">
-          <div class="team-card-name">Team Member</div>
-          <div class="team-card-credentials">LPC-MHSP</div>
-          <div class="team-card-title">Licensed Professional Counselor</div>
-          <p class="team-card-bio">Experienced in group facilitation and first responder grief support. Dedicated to serving those who serve others.</p>
-          <div class="specialty-tags">
-            <span class="specialty-tag">Group Facilitation</span>
-            <span class="specialty-tag">First Responders</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="team-card">
-        <div class="team-card-image">
-          <span>Photo Coming Soon</span>
-        </div>
-        <div class="team-card-info">
-          <div class="team-card-name">Team Member</div>
-          <div class="team-card-credentials">LPC</div>
-          <div class="team-card-title">Licensed Professional Counselor</div>
-          <p class="team-card-bio">Specializing in trauma-informed care and culturally responsive grief therapy. Meeting every client where they are.</p>
-          <div class="specialty-tags">
-            <span class="specialty-tag">Trauma-Informed</span>
-            <span class="specialty-tag">Cultural Competency</span>
           </div>
         </div>
       </article>
