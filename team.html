@@ -40,6 +40,17 @@
             "@type": "MedicalBusiness",
             "name": "The Grief Center"
           }
+        },
+        {
+          "@type": "Person",
+          "name": "Jeremy McKinnon",
+          "jobTitle": "Therapist",
+          "description": "EMDR-trained therapist working with individuals and couples on grief, relationship challenges, trauma, and life transitions. Offers evening and weekend availability.",
+          "email": "jeremymckinnon@thegriefcenterheals.org",
+          "worksFor": {
+            "@type": "MedicalBusiness",
+            "name": "The Grief Center"
+          }
         }
       ]
     },
@@ -385,7 +396,16 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
   width: 100%; aspect-ratio: 1; background: var(--lavender);
   display: flex; align-items: center; justify-content: center;
   color: var(--text-muted); font-size: 0.85rem;
+  overflow: hidden;
 }
+.team-card-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.team-card-email {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.85rem; color: var(--deep-purple); font-weight: 500;
+  margin: 14px 0 16px; word-break: break-all;
+}
+.team-card-email:hover { color: var(--gold); }
+.team-card-email svg { width: 14px; height: 14px; flex-shrink: 0; }
 .team-card-info { padding: 28px 24px; }
 .team-card-name { font-size: 1.3rem; font-weight: 600; margin-bottom: 4px; font-family: 'Cormorant Garamond', serif; color: var(--text-dark); }
 .team-card-credentials { font-size: 0.82rem; color: var(--gold); font-weight: 600; letter-spacing: 0.04em; }
@@ -736,16 +756,24 @@ nav { display: flex; align-items: center; justify-content: flex-end; flex: 1; mi
 
       <article class="team-card">
         <div class="team-card-image">
-          <span>Photo Coming Soon</span>
+          <img src="jeremy-mckinnon.png" alt="Jeremy McKinnon, Therapist at The Grief Center">
         </div>
         <div class="team-card-info">
-          <div class="team-card-name">Team Member</div>
-          <div class="team-card-credentials">LPC</div>
-          <div class="team-card-title">Licensed Professional Counselor</div>
-          <p class="team-card-bio">Specializing in individual grief therapy and life transitions. Passionate about creating safe spaces for processing loss.</p>
+          <div class="team-card-name">Jeremy McKinnon</div>
+          <div class="team-card-credentials">EMDR TRAINED</div>
+          <div class="team-card-title">Therapist &mdash; Individuals &amp; Couples</div>
+          <p class="team-card-bio">Reaching out for support takes courage. Whether you're navigating grief, relationship challenges, trauma, or life transitions, you deserve a space that feels safe, steady, and grounded. Jeremy works with individuals and couples, offering compassionate, evidence-based care with night and weekend availability to meet the needs of busy professionals, caregivers, and families. His approach is collaborative, respectful, and rooted in the belief that healing happens when people feel understood&mdash;not judged or rushed.</p>
+          <a class="team-card-email" href="mailto:jeremymckinnon@thegriefcenterheals.org">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            jeremymckinnon@thegriefcenterheals.org
+          </a>
           <div class="specialty-tags">
-            <span class="specialty-tag">Individual Therapy</span>
+            <span class="specialty-tag">EMDR</span>
+            <span class="specialty-tag">Grief &amp; Loss</span>
+            <span class="specialty-tag">Couples Therapy</span>
+            <span class="specialty-tag">Trauma</span>
             <span class="specialty-tag">Life Transitions</span>
+            <span class="specialty-tag">Evenings &amp; Weekends</span>
           </div>
         </div>
       </article>
